@@ -81,7 +81,7 @@ namespace AverageValuesPractice
             this.Controls.Add(this.addButton);
             this.Controls.Add(this.inputBox);
             this.Name = "form1";
-            this.Text = "Reset";
+            this.Text = "Average Values Calculator";
             this.ResumeLayout(false);
             this.PerformLayout();
 

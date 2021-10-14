@@ -12,7 +12,8 @@ namespace AverageValuesPractice
 {
     public partial class form1 : Form
     {
-        int sum;
+        int inputNum;
+        int sum = 0;
         int totalNumbers;
         int avg;
 
@@ -24,15 +25,24 @@ namespace AverageValuesPractice
 
         private void addButton_Click(object sender, EventArgs e)
         {
-            sum = Convert.ToInt32(inputBox.Text);
-            avg = (sum / totalNumbers);
+            //try
+            //{
+                inputNum = Convert.ToInt32(inputBox.Text);
+            //}
+            //catch
+            //{
+            //    outputLabel.Text = $"Enter a valid integer";
+            //}
 
-            if(sum != 0)
+            if (inputNum != 0)
             {
-                //fill this in
+                sum = sum + inputNum;
+                outputLabel.Text = $"{inputNum} was added to the sum.";
+                totalNumbers++;
             }
             else
             {
+                avg = sum / totalNumbers;
                 outputLabel.Text = $"The average of all numbers entered is: {avg}";
             }
         }
